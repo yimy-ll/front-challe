@@ -3,7 +3,7 @@ import { Input } from "./ui/input"
 import { Button } from "./ui/button"
 import { usePhrases } from '../context/PhrasesContext'
 
-export function PhraseForm() {
+export function PhraseForm({ id, placeholder }) {
   const [newPhrase, setNewPhrase] = useState("")
   const { addPhrase } = usePhrases()
 
@@ -14,15 +14,16 @@ export function PhraseForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="mb-4 flex gap-2">
+    <form onSubmit={handleSubmit} className="mb-4 flex gap-2" role={"form"}>
       <Input
         type="text"
+        id={id}
         value={newPhrase}
         onChange={(e) => setNewPhrase(e.target.value)}
-        placeholder="Ingresa una nueva frase"
+        placeholder={placeholder}
         className="flex-grow"
       />
-      <Button type="submit">Agregar</Button>
+      <Button type="submit" test-id={id}>Agregar</Button>
     </form>
   )
 }

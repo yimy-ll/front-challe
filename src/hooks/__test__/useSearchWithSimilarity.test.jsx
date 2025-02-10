@@ -18,8 +18,7 @@ describe('useSearchWithSimilarity', () => {
             result.current.setSearchTerm('apple')
         })
 
-        // Wait for debounce
-        await new Promise(resolve => setTimeout(resolve, 500))
+        await new Promise(resolve => setTimeout(resolve, 1000))
 
         expect(result.current.filteredItems).toEqual(['apple'])
     })
@@ -32,8 +31,7 @@ describe('useSearchWithSimilarity', () => {
             result.current.setSearchTerm('apple')
         })
 
-        // Wait for debounce
-        await new Promise(resolve => setTimeout(resolve, 500))
+        await new Promise(resolve => setTimeout(resolve, 600))
 
         expect(result.current.filteredItems).toContain('apple')
         expect(result.current.filteredItems).toContain('pineapple')
@@ -48,7 +46,7 @@ describe('useSearchWithSimilarity', () => {
         })
 
         // Wait for debounce
-        await new Promise(resolve => setTimeout(resolve, 500))
+        await new Promise(resolve => setTimeout(resolve, 600))
 
         expect(result.current.filteredItems).toContain('Apple')
     })

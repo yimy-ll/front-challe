@@ -1,5 +1,6 @@
 import { createContext, useContext, useState } from 'react'
 import { useSearchWithSimilarity } from '../hooks/useSearchWithSimilarity'
+import React from "react";
 
 const PhrasesContext = createContext()
 

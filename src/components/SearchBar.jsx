@@ -1,7 +1,7 @@
 import { Input } from "./ui/input"
 import { usePhrases } from '../context/PhrasesContext'
 
-export function SearchBar() {
+export function SearchBar({id, placeholder}) {
   const { searchTerm, setSearchTerm } = usePhrases()
 
   return (
@@ -9,7 +9,8 @@ export function SearchBar() {
       type="text"
       value={searchTerm}
       onChange={(e) => setSearchTerm(e.target.value)}
-      placeholder="Buscar frases..."
+      id={id}
+      placeholder={placeholder}
       className="mb-4"
     />
   )
