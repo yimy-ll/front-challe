@@ -7,7 +7,7 @@ function App() {
   return (
     <PhrasesProvider>
       <div className="container mx-auto p-4">
-        <h1 className="text-2xl font-bold mb-4">Matriz de Frases</h1>
+        <h1 className="text-2xl font-bold mb-4">Lista De Frases</h1>
         <PhraseForm
             placeholder={"Ingresa una nueva frase..."}
             id={"new-phrase"}
