@@ -1,5 +1,6 @@
-import { Card, CardContent } from "./ui/card"
-import { Button } from "./ui/button"
+import React from 'react';
+import { Card, CardContent } from "./ui/Card.jsx"
+import { Button } from "./ui/Button.jsx"
 import { X } from "lucide-react"
 import { usePhrases } from '../context/PhrasesContext'
 

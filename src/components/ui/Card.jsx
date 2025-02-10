@@ -1,6 +1,5 @@
-import { forwardRef } from "react"
+import React, { forwardRef } from "react"
 import {mergeTw} from "../../lib/utils"
-
 
 const Card = forwardRef(({ className, ...props }, ref) => (
   <div

@@ -13,7 +13,6 @@ export function useSearchWithSimilarity(items, delay = 500) {
 
     if (phrasesLowerCase.includes(phrasesCompareLowerCase) || phrasesCompareLowerCase.includes(phrasesLowerCase)) return 0.8
 
-    // Calculate similarity based on common characters
     const charsPhrases = new Set(phrasesLowerCase)
     const charsPhrasesCompare = new Set(phrasesCompareLowerCase)
     const intersection = new Set([...charsPhrases].filter(char => charsPhrasesCompare.has(char)))

@@ -1,9 +1,10 @@
+import React from 'react';
 import { useState } from 'react'
-import { Input } from "./ui/input"
-import { Button } from "./ui/button"
+import { Input } from "./ui/Input.jsx"
+import { Button } from "./ui/Button.jsx"
 import { usePhrases } from '../context/PhrasesContext'
 
-export function PhraseForm({ id, placeholder }) {
+export function PhraseForm({ placeholder, id  }) {
   const [newPhrase, setNewPhrase] = useState("")
   const { addPhrase } = usePhrases()
 

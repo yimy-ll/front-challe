@@ -1,8 +1,9 @@
-import { forwardRef } from "react"
+import React, { forwardRef } from "react"
 import {mergeTw} from "../../lib/utils"
 
-const Input = forwardRef(({ className, type, ...props }, ref) => {
-  return (
+const Input = forwardRef(({ className, type, ...props }, ref,placeholder) => {
+
+    return (
     <input
       type={type}
       className={mergeTw(
@@ -10,6 +11,7 @@ const Input = forwardRef(({ className, type, ...props }, ref) => {
         className
       )}
       ref={ref}
+      placeholder={placeholder}
       {...props}
     />
   )

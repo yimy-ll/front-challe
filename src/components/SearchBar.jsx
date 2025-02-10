@@ -1,4 +1,5 @@
-import { Input } from "./ui/input"
+import React from 'react';
+import { Input } from "./ui/Input.jsx"
 import { usePhrases } from '../context/PhrasesContext'
 
 export function SearchBar({id, placeholder}) {

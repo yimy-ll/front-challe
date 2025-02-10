@@ -1,10 +1,11 @@
+import React from 'react';
+import '@testing-library/jest-dom'
 import { render, screen, fireEvent } from '@testing-library/react'
 import { describe, it, expect, vi } from 'vitest'
 import { PhraseList } from '../PhraseList'
 import { PhrasesProvider } from '../../context/PhrasesContext'
 import { usePhrases } from '../../context/PhrasesContext'
 
-// Mock the context hook
 vi.mock('../../context/PhrasesContext', async () => {
     const actual = await vi.importActual('../../context/PhrasesContext')
     return {
